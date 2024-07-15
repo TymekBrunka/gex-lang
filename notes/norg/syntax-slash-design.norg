@@ -1,0 +1,52 @@
+@document.meta
+title: syntax-slash-design
+description: 
+authors: tymek
+categories: 
+created: 2024-07-14T10:55:00+0100
+updated: 2024-07-14T16:09:58+0100
+version: 1.1.1
+@end
+
+* *Gex language*
+
+  Gex language is (or is supposed to be) lua like language with types, classes, function decorators and maybe pointers
+  easly embedable with ability to overrite operators and library permision system.
+
+  Tergeted systems:
+  - linux
+  - macos
+  - linux
+  - android
+  - ios
+
+** base lib
+
+   Base lib is base for Gex programing language containing basic types, classes, operators and functions
+   necesary for Gex language to function properly.
+   Base lib isn't library, so you dont have to import it, it is build into interpreter.
+    
+   - comment
+     @code
+     //this is comment
+     /*
+      this is multiline
+      comment
+     */
+     @end
+
+*** base types
+    
+    - Int
+      @code gex
+      69        // decimal notation
+      // 0b1000101 // binary notation
+      // 0x45      // hexadecimal notation
+      69e420    // 69 * 10^420
+      @end
+
+    - float
+      @code
+      1.0 //implicit declaration of float
+      0f1 //explicit declaration of float
+      @end
