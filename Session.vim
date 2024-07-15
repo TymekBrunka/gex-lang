@@ -13,36 +13,18 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +10 ~/Documents/gex/notes/syntax-slash-design.norg
-badd +1 ~/Documents/gex/notes/md/syntax-and-design.md
-badd +25 ~/Documents/gex/notes/md/./lib-perm-system.md
 argglobal
 %argdel
-edit ~/Documents/gex/notes/md/./lib-perm-system.md
 argglobal
-balt ~/Documents/gex/notes/md/syntax-and-design.md
-setlocal fdm=expr
-setlocal fde=v:lua.vim.treesitter.foldexpr()
+enew
+setlocal fdm=manual
+setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
 setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-1
-normal! zo
-7
-normal! zo
-21
-normal! zo
-22
-normal! zo
-let s:l = 25 - ((24 * winheight(0) + 28) / 56)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 25
-normal! 05|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
