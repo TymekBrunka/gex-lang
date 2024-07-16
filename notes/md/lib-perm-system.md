@@ -8,7 +8,7 @@
     <h2 align="center">-&nbspLibrary permision system&nbsp-</h2>
     permisions for <strong>accessing libraries</strong>
     and permisions for <strong>libraries to access system</strong>
-    <h3 style="color: #aa0000">
+    <h3>
         Note: this only works with fully gex modules
         and gex libraries, that use types and classes,
         that gex interpreter can pass permisions to.

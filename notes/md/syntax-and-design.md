@@ -1,7 +1,7 @@
 <h1 align="center">Gex programming language</h1>
 
 <p align="center">
-  <img style="width: min(30vw, 30vh);" src="../../img/gex3.svg">
+  <img src="../../img/gex3.svg">
 </p>
 
 Gex language is (or is supposed to be) **dynamicly typed lua like language** with:
