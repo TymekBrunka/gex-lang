@@ -1,3 +1,9 @@
+---
+id: syntax-and-design
+aliases: []
+tags: []
+---
+
 <h1 align="center">Gex programming language</h1>
 
 <p align="center">
