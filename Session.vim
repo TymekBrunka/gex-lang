@@ -13,10 +13,14 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
+badd +17 ~/Documents/gex/README.md
+badd +8 ~/Documents/gex/notes/md/syntax-and-design.md
+badd +27 ~/Documents/gex/notes/md/lib-perm-system.md
 argglobal
 %argdel
+edit ~/Documents/gex/notes/md/lib-perm-system.md
 argglobal
-enew
+balt ~/Documents/gex/README.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -25,6 +29,14 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 27 - ((26 * winheight(0) + 28) / 56)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 27
+normal! 079|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

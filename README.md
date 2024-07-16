@@ -5,7 +5,7 @@
 </p>
 
 Gex language is (or is supposed to be) **dynamicly typed lua like language** with:
-- static types and type classes (when type or type class is not assigned then varaible's type can change at runtime)
+- static types and type classes (when type or type class is not assigned, then varaible's type can change at runtime)
 - classes
 - function decorators
 - traits (like in haskel fun a -> a takes value of type a and returns value of type a)
