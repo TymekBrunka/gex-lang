@@ -45,8 +45,7 @@ Base lib isn't library, so you dont have to import it, it is build into interpre
 
   - #### Int
     ``` c
-    69        // decimal notation
-[[1721036641-DQEM|    69e420    // 69 * 10^420]]
+    69        // decimal notation 69e420    // 69 * 10^420]]
     ```
   
   - #### Float

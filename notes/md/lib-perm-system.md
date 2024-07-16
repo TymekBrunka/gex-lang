@@ -43,10 +43,13 @@ function(value1, value2);
 ```
 
 - file system permisions
-  - `reset_fs_permisions()` - unloads default gex file system permisions (read, write, delete for all directories)
+  - `reset_fs_permisions()` - removes default gex file system permisions (read, write, delete for all directories)
   - `allow_all_in_dir(path: string, include_subdirectories: bool)` - allows to read, write and delete files and folders in `path`(argument).
   - `allow_reading_in_dir(path: string, include_subdirectories: bool)` - allows to read files in `path`(argument)
   - `allow_writing_in_dir(path: string, include_subdirectories: bool, allow_making_folders: bool)` - allows to write and delete files in `path`(argument)
 
 - library permisions
-  - ``
+  - `reset_lib_permisions()` - removes permisions for using any library in gex
+  - `allow_all_std_libs()`
+  - `allow_lib(name)` - allows use of `name` library
+

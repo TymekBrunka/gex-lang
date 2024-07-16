@@ -15,26 +15,28 @@ else
 endif
 badd +1 ~/.config/nvim/init.lua
 badd +33 lib-perm-system.md
-badd +1 syntax-and-design.md
+badd +40 syntax-and-design.md
 argglobal
 %argdel
 edit lib-perm-system.md
 argglobal
-balt ~/.config/nvim/init.lua
-setlocal fdm=expr
-setlocal fde=Foldexpr_markdown(v:lnum)
+balt syntax-and-design.md
+setlocal fdm=manual
+setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=2
+setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 33 - ((0 * winheight(0) + 14) / 28)
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 33 - ((10 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 33
-normal! 02|
+normal! 0138|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
