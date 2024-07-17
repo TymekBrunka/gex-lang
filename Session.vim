@@ -14,8 +14,8 @@ else
   set shortmess=aoO
 endif
 badd +4 ~/Documents/gex/README.md
-badd +5 ~/Documents/gex/notes/md/syntax-and-design.md
-badd +46 ~/Documents/gex/notes/md/lib-perm-system.md
+badd +4 ~/Documents/gex/notes/md/syntax-and-design.md
+badd +22 ~/Documents/gex/notes/md/lib-perm-system.md
 argglobal
 %argdel
 edit ~/Documents/gex/notes/md/lib-perm-system.md
@@ -31,12 +31,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 46 - ((43 * winheight(0) + 28) / 56)
+let s:l = 22 - ((0 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 46
-normal! 05|
+keepjumps 22
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

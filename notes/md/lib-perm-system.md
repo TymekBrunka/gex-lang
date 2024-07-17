@@ -47,9 +47,15 @@ function(value1, value2);
   - `allow_all_in_dir(path: string, include_subdirectories: bool)` - allows to read, write and delete files and folders in `path`(argument).
   - `allow_reading_in_dir(path: string, include_subdirectories: bool)` - allows to read files in `path`(argument)
   - `allow_writing_in_dir(path: string, include_subdirectories: bool, allow_making_folders: bool)` - allows to write and delete files in `path`(argument)
+  - `deny_all_in_dir(path: string, include_subdirectories: bool)` - denies to read, write and delete files and folders in `path`(argument).
+  - `deny_reading_in_dir(path: string, include_subdirectories: bool)` - denies to read files in `path`(argument)
+  - `deny_writing_in_dir(path: string, include_subdirectories: bool)` - denies to write and delete files in `path`(argument)
 
 - library permisions
   - `reset_lib_permisions()` - removes permisions for using any library in gex
   - `allow_all_std_libs()`
+  - `allow_external_gex_libs(bool)` - allows use of external libraries written in gex only if `bool` is `true`
+  - `allow_external_nongex_libs(bool)` - allows use of external libraries loaded as dynamic libraries
+    (`.dll` for windows, `.dylib` for macos, `.so` for linux) only if `bool` is `true`
   - `allow_lib(name)` - allows use of `name` library
-
+  - `deny_lib(name)` - denies use of `name` library
