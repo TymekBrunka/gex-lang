@@ -14,7 +14,7 @@ else
   set shortmess=aoO
 endif
 badd +1 ~/.config/nvim/init.lua
-badd +33 lib-perm-system.md
+badd +54 lib-perm-system.md
 badd +40 syntax-and-design.md
 argglobal
 %argdel
@@ -31,12 +31,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 33 - ((10 * winheight(0) + 14) / 28)
+let s:l = 54 - ((5 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 33
-normal! 0138|
+keepjumps 54
+normal! 052|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

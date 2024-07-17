@@ -30,7 +30,7 @@ tags: []
 
    But when using **embeded gex**, then (if you have access to stdout) you can dump permisions to stdout (dy default: console) by using `__dump_perms()` function
 
-- 2. To overwrite gex permisions for gex script run by **system binary**, `--perms` flag should be used with path to file containing permisions.
+2. To overwrite gex permisions for gex script run by **system binary**, `--perms` flag should be used with path to file containing permisions.
    And to do the same thing with **embeded gex**, we use `gex::load_perms_from_file()` function in C++ gex api with path to permisions file or by using `gex::load_perms()` with permisions string passed directly into function.
 
 ## Types of permisions
